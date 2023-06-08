@@ -2,7 +2,7 @@ import './App.css';
 import Header from '../src/component/Header';
 import Footer from '../src/component/Footer';
 import Todo from '../src/component/Todo';
-import { useEffect, useState, Component } from 'react';
+import { useEffect, useState } from 'react';
 import AddTodo from './component/AddTodo';
 
 var idSequence = 0;
@@ -34,8 +34,18 @@ function App(){
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
-    //setItemList(exItems);
-    console.log(itemList);
+    const requestOptions = {
+      method: "GET",
+      headers: {"Content-Type": "application/json"}
+    }
+    
+    fetch("http://localhost:8080/todo", requestOptions)
+    .then((response) => response.json())
+    .then((response) => {
+      setItemList(response.data);
+    }, (error) => {
+      console.log(`에러발생: ${error}`);
+    })
   }, []);
   
   useEffect(() => {
