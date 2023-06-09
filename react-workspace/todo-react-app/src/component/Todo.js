@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 
-function Todo({item, deleteItem, modifyItem}){
+function Todo({item, deleteItem, updateItm, }){
     const [todoItm, setTodoItm] = useState(item); // 수정용 item. 의미: 화면에는 나타나지 않지만 실제 DB에 반영되야할 데이터를 담고 있음.
     const [turnModify, setTurnModify] = useState(false);
 
     const checkHandle = () =>{
-        var tmpCheckState = false;
-        if(item.done === true) tmpCheckState = false;
-        else tmpCheckState = true;
-        setTodoItm({
-            ...item,
-            done: tmpCheckState
-        })
-        modifyItem(todoItm);
+        const thisItm = todoItm;
+        thisItm.done = !thisItm.done;
+        setTodoItm(thisItm);
+        updateItm(thisItm);
     }
 
     const deleteHandle = () =>{
@@ -24,7 +20,7 @@ function Todo({item, deleteItem, modifyItem}){
         if(turnModify === false) setTurnModify(true);
         else{
             setTurnModify(false);
-            modifyItem(todoItm);
+            updateItm(todoItm);
         }
     }
 

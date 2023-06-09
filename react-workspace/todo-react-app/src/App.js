@@ -39,7 +39,7 @@ function App(){
         <AddTodo addItem={addTodoFunction}/>
         {
           itemList.items.map((itm) => (
-            <Todo item={itm} deleteItem={deleteTodoFunction} modifyItem={modifyTodoFunction}/>
+            <Todo item={itm} deleteItem={deleteTodoFunction} updateItm={modifyTodoFunction}/>
           ))
         }
       <Footer/>
