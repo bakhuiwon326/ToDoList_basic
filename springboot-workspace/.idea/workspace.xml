@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e196941b-fc4b-4676-86bc-d58bcddc2889" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/todoList/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/todoList">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2RcPfPdyy1h83goJgxfK9HSqWgC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/groom/Documents/GitHub/ToDoList_basic/springboot-workspace",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "092df2c56dc8b1996bcb1f15354ff1d3",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TodoListApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="todoList.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="todo.project.todoList.TodoListApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e196941b-fc4b-4676-86bc-d58bcddc2889" name="Changes" comment="" />
+      <created>1687546498464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687546498464</updated>
+      <workItem from="1687546499467" duration="596000" />
+      <workItem from="1687547106540" duration="13248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

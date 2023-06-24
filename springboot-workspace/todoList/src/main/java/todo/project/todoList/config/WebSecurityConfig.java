@@ -19,22 +19,23 @@ import todo.project.todoList.security.JwtAuthenticationFilter;
 
 @Slf4j
 @EnableWebSecurity
-@RequiredArgsConstructor
+@Configuration
 public class WebSecurityConfig{
-    @Autowired
-    JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    private final CorsFilter corsFilter;
+    @Autowired
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+        System.out.println("filterchain실행됨");
+        http.cors();
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .addFilter(corsFilter)
+                .addFilterAfter(jwtAuthenticationFilter, CorsFilter.class)
                 .formLogin().disable()
                 .httpBasic().disable()
-                .authorizeHttpRequests().requestMatchers("/","/auth/**").permitAll().anyRequest().authenticated();
+                .authorizeHttpRequests().requestMatchers("/", "auth/**").permitAll().anyRequest().authenticated();
         return http.build();
     }
 

@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "../app-config";
 
-export const call = (api, method, request) =>{
+export function call(api, method, request) {
   let options = {
     headers: new Headers({
       "Content-Type": "application/json",
@@ -12,13 +12,32 @@ export const call = (api, method, request) =>{
     // GET method
     options.body = JSON.stringify(request);
   }
-  return fetch(options.url, options).then((response) =>
-    response.json().then((json) => {
+  return fetch(options.url, options)
+    .then((response) => {
       if (!response.ok) {
-        // response.ok가 true이면 정상적인 리스폰스를 받은것, 아니면 에러 리스폰스를 받은것.
-        return Promise.reject(json);
+        // 오류 응답 처리
+        throw new Error(response.status);
       }
+      // 정상적인 응답 처리
+      return response.json();
+    })
+    .then((json) => {
       return json;
     })
-  );
+    .catch((error) => {
+      console.log(error);
+      if (error.message === "403") {
+        window.location.href = "/login"; // 403 에러 시 로그인 페이지로 리디렉션
+      }
+      return Promise.reject(error);
+    });
+}
+
+export function signin(userDTO) {
+  return call("/auth/signin", "POST", userDTO).then((response) => {
+    if (response.token) {
+      // token이 존재하는 경우 Todo 화면으로 리디렉트
+      window.location.href = "/";
+    }
+  });
 }
