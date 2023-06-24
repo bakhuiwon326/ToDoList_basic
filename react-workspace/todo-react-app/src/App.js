@@ -1,19 +1,48 @@
 import './App.css';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import Main from './page/Main';
-import Login from './page/Login';
-import SignUp from './page/SignUp';
+import Header from '../src/component/Header';
+import Footer from '../src/component/Footer';
+import Todo from '../src/component/Todo';
+import { useEffect, useState } from 'react';
+import AddTodo from './component/AddTodo';
+import { call } from "./service/ApiService";
 
 var idSequence = 0;
 
 function App(){
-    return (
-      <div className="App">
-      <Routes>
-        <Route path='/' element={<Main />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/SignUp' element={<SignUp/>}/>
-      </Routes>
+
+  const [itemList, setItemList] = useState({items:[]});
+
+  useEffect(() => {
+    call("/todo", "GET", null).then((res) => setItemList({items: res.data}));  
+  }, []);
+  
+  useEffect(() => {
+    console.log(`화면에 출력되는 itemList가 변경되었습니다.`);
+    console.log(itemList);
+  }, [itemList]);
+
+  const addTodoFunction = (newItem) => {
+    call("/todo", "POST", newItem).then((res) => setItemList({items: res.data}));  
+  };
+
+  const deleteTodoFunction = (deleteItem) =>{
+    call("/todo", "DELETE", deleteItem).then((res) => setItemList({items: res.data}));  
+  }
+
+  const modifyTodoFunction = (modifyItem) =>{
+    call("/todo", "PUT", modifyItem).then((res) => setItemList({items: res.data}));  
+  }
+
+  return (
+    <div>
+      <Header/>
+        <AddTodo addItem={addTodoFunction}/>
+        {
+          itemList.items.map((itm) => (
+            <Todo item={itm} deleteItem={deleteTodoFunction} updateItm={modifyTodoFunction}/>
+          ))
+        }
+      <Footer/>
     </div>
   );
 }

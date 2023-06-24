@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.UUID;
-
 @Data
 @Builder
 @NoArgsConstructor

@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import todo.project.todoList.model.TodoEntity;
 
-import java.util.UUID;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
