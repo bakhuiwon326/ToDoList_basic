@@ -4,14 +4,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import todo.project.todoList.dto.ResponseDTO;
 import todo.project.todoList.dto.UserDTO;
 import todo.project.todoList.model.UserEntity;
+import todo.project.todoList.security.TokenProvider;
 import todo.project.todoList.service.UserService;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -19,6 +19,8 @@ import todo.project.todoList.service.UserService;
 public class UserController {
     @Autowired
     UserService userService;
+    @Autowired
+    private TokenProvider tokenProvider;
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO dto){
@@ -45,9 +47,11 @@ public class UserController {
     public ResponseEntity<?> authenticate(@RequestBody UserDTO dto){
         UserEntity user = userService.getByCredentials(dto.getEmail(), dto.getPassword());
         if(user != null){
+            final String token = tokenProvider.create(user);
             final UserDTO responseUserDTO = UserDTO.builder()
                     .email(user.getEmail())
                     .id(user.getId())
+                    .token(token)
                     .build();
             return ResponseEntity.ok().body(responseUserDTO);
         }
@@ -56,5 +60,11 @@ public class UserController {
             return ResponseEntity.badRequest().body(responseDTO);
         }
     }
-    
+
+    @GetMapping("/returnAll")
+    public ResponseEntity<?> returnAll(){
+        List<UserEntity> users =  userService.getAllUsers();
+        return ResponseEntity.ok().body(users);
+    }
+
 }

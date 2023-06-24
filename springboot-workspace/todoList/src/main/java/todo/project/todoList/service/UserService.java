@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import todo.project.todoList.model.UserEntity;
 import todo.project.todoList.persistence.UserRepository;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class UserService {
@@ -15,17 +17,20 @@ public class UserService {
     public UserEntity create(UserEntity userEntity){
         if(userEntity == null || userEntity.getEmail() == null) {
             throw new RuntimeException("Invalid arguments");
-            }
-            final String email = userEntity.getEmail();
-            if(userRepository.existsByEmail(email)){
-                log.warn("email already exists{}", email);
-                throw new RuntimeException("Email already exists");
-            }
-            return userRepository.save(userEntity);
+        }
+        final String email = userEntity.getEmail();
+        if(userRepository.existsByEmail(email)){
+            log.warn("email already exists{}", email);
+            throw new RuntimeException("Email already exists");
+        }
+        return userRepository.save(userEntity);
     }
 
     public UserEntity getByCredentials(final String email, final String password){
         return userRepository.findByEmailAndPassword(email, password);
     }
 
+    public List<UserEntity> getAllUsers(){
+        return userRepository.findAll();
+    }
 }
