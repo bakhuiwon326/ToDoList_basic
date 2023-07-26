@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e196941b-fc4b-4676-86bc-d58bcddc2889" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/todoList/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todoList/src/main/java/todo/project/todoList/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/component/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/page/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/page/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/page/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/page/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/service/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-workspace/todo-react-app/src/service/ApiService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687546498464</updated>
       <workItem from="1687546499467" duration="596000" />
-      <workItem from="1687547106540" duration="13248000" />
+      <workItem from="1687547106540" duration="19122000" />
     </task>
     <servers />
   </component>
