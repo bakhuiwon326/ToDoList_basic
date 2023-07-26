@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import AddTodo from '../component/AddTodo';
 import { call } from "../service/ApiService";
 
-function Main(){
+function Main({login, setLogin}){
 
   const [itemList, setItemList] = useState({items:[]});
 

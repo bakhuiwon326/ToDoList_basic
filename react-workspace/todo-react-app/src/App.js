@@ -1,19 +1,22 @@
 import './App.css';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import Main from './page/Main';
-import Login from './page/Login';
-import SignUp from './page/SignUp';
+import { BrowserRouter } from 'react-router-dom';
+import Footer from './component/Footer';
+import Header from './component/Header';
+import ToDoService from './ToDoService';
+import React, { useState } from 'react';
 
 var idSequence = 0;
 
 function App(){
+  const [isLogin, SetIsLogin] = useState(false);
+
     return (
       <div className="App">
-      <Routes>
-        <Route path='/' element={<Main />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/SignUp' element={<SignUp/>}/>
-      </Routes>
+        <BrowserRouter>
+          <Header login={isLogin} setLogin={SetIsLogin}/>
+          <ToDoService login={isLogin} setLogin={SetIsLogin}/>
+          <Footer login={isLogin} setLogin={SetIsLogin}/>
+        </BrowserRouter>
     </div>
   );
 }

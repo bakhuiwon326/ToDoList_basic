@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { call } from "../service/ApiService";
+import { call, signin } from "../service/ApiService";
 
-function Login(){
+function Login({login, setLogin}){
     const [input, setInput] = useState({email: "", password: ""});
     const loginBtn = () => {
-        call("/auth/signin", "POST", input).then((res) => console.log(res));
+        signin(input);
+        call("/auth/signin", "POST", input).then((res) => {
+            console.log(res)
+            if(res.ok) setLogin(true);
+            else setLogin(false);
+        });
     };
     const login_emailHandler = (e) =>{
         setInput({

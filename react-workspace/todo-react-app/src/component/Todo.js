@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Todo({item, deleteItem, updateItm, }){
+function Todo({item, deleteItem, updateItm}){
     const [todoItm, setTodoItm] = useState(item); // 수정용 item. 의미: 화면에는 나타나지 않지만 실제 DB에 반영되야할 데이터를 담고 있음.
     const [turnModify, setTurnModify] = useState(false);
 
